@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group android:id="@+id/gpMenu">
+    <group android:id="@+id/gpMenu"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/mGpAlterar"
             android:title="Alterar" />
@@ -10,8 +12,28 @@
             android:title="Excluir" />
     </group>
 
+    <item android:title="Outros">
+        <menu>
+            <item
+                android:id="@+id/mGpFav"
+                android:title="Favoritos"
+                android:icon="@drawable/ic_favorite"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/mGpSpam"
+                android:title="Spam"
+                android:icon="@drawable/ic_block"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/mGpLixeira"
+                android:title="Lixeira"
+                android:icon="@drawable/ic_delete"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
     <item
         android:id="@+id/mGpSair"
-        android:title="Sair" />
-
+        android:title="Sair"
+        android:icon="@drawable/ic_exit"
+        app:showAsAction="ifRoom"/>
 </menu>

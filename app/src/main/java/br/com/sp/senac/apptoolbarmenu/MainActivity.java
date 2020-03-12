@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -44,27 +45,36 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mSalvar:
                 Toast.makeText(getApplicationContext(), "Cliquei no Salvar!!!", Toast.LENGTH_SHORT).show();
                 break;
-        }
-        switch (item.getItemId()) {
+
             case R.id.mAlterar:
                 Toast.makeText(getApplicationContext(), "Cliquei no Alterar!!!", Toast.LENGTH_SHORT).show();
                 break;
-        }
-        switch (item.getItemId()) {
+
             case R.id.mExcluir:
                 Toast.makeText(getApplicationContext(), "Cliquei no Excluir!!!", Toast.LENGTH_SHORT).show();
                 break;
-        }
-        switch (item.getItemId()) {
+
             case R.id.mBuscar:
                 Toast.makeText(getApplicationContext(), "Cliquei no Buscar!!!", Toast.LENGTH_SHORT).show();
                 break;
-        }
-        switch (item.getItemId()) {
+
+            case R.id.mAbrir:
+                // Intent abrirJanelaNova = new Intent(getApplicationContext(),SubMenu_Activity.class);
+                // startActivity(abrirJanelaNova);
+
+                startActivity(new Intent(getApplicationContext(), SubMenu_Activity.class));
+                break;
+
+            case R.id.mAbriGrupo:
+
+                startActivity(new Intent(getApplicationContext(), GrupoMenu_Activity.class));
+                break;
+
             case R.id.mSair:
-                Toast.makeText(getApplicationContext(), "Cliquei no Sair!!!", Toast.LENGTH_SHORT).show();
+                finish();
                 break;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

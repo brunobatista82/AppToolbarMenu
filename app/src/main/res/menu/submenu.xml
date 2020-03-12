@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/sbMenu"
-        android:title="Arquivo">
+        android:id="@+id/mSubMenu"
+        android:title="Arquivo"
+        android:icon="@drawable/ic_file"
+        app:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/mSubSalvar"
@@ -15,7 +18,9 @@
 
     </item>
     <item
-        android:id="@+id/mFechar"
-        android:title="Fechar" />
+        android:id="@+id/mSubFechar"
+        android:title="Fechar"
+        android:icon="@drawable/ic_exit"
+        app:showAsAction="ifRoom"/>
 
 </menu>
